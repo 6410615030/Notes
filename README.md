@@ -20,4 +20,4 @@ Tap on the "Delete" button to remove the note from your list.
 * To view the details of a specific note, simply tap on the note in the list. This will open the note in full-screen view, displaying the title and content.
 <img src="media/detail.png" width = 30%>
 * Here is your Profile page. You can view your profile details here, including your name, surname, and email address. To log out, simply tap on the logout button.
-<img src="media/Profiles.png" width = 30%>
+<img src="media/Profile.png" width = 30%>
