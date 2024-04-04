@@ -12,17 +12,20 @@ struct NotesListView: View {
     @StateObject var viewModel: NotesListViewModel
     
     @FirestoreQuery var items: [NotesItem]
+    let userId: String
     
     init(userId: String) {
         self._items = FirestoreQuery(collectionPath: "users/\(userId)/todos")
         self._viewModel = StateObject(wrappedValue: NotesListViewModel(userId: userId))
+        
+        self.userId = userId
     }
     
     var body: some View {
         NavigationView {
             VStack {
                 List(items) { item in
-                    NavigationLink(destination: NotesDetailView(item: item)) {
+                    NavigationLink(destination: NotesDetailView(userId:userId , item: item)) {
                         NotesItemView(item: item)
                             .swipeActions {
                                 Button {
